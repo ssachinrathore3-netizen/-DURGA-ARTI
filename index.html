@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌺 माँ दुर्गा आरती 🌺</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
+  min-height:100vh;
+  text-align:center;
+  color:#fff;
+  overflow-x:hidden;
+
+  background:
+    radial-gradient(circle at center,rgba(255,193,7,.25),transparent 35%),
+    linear-gradient(135deg,#380000,#780000,#b71c1c,#4a0000);
+}
+
+/* मंदिर का प्रकाश */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at 50% 35%,
+    rgba(255,193,7,.35),
+    transparent 35%);
+  animation:light 3s infinite alternate;
+}
+
+@keyframes light{
+  from{opacity:.5}
+  to{opacity:1}
+}
+
+/* Floating Flowers */
+.flower{
+  position:fixed;
+  top:-50px;
+  z-index:5;
+  pointer-events:none;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  0%{
+    transform:translateY(-50px) rotate(0);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:.2;
+  }
+}
+
+header{
+  padding:30px 15px 15px;
+  position:relative;
+  z-index:2;
+}
+
+header h1{
+  font-size:42px;
+  color:#ffd54f;
+  text-shadow:0 0 15px #ff9800;
+}
+
+header p{
+  font-size:20px;
+  margin-top:8px;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:15px;
+  position:relative;
+  z-index:2;
+}
+
+/* Durga Image */
+.mata{
+  width:280px;
+  height:280px;
+  object-fit:cover;
+  border-radius:50%;
+  border:8px solid #ffd54f;
+  box-shadow:
+    0 0 20px #ff9800,
+    0 0 50px #ff5722;
+  animation:zoom 4s infinite alternate;
+}
+
+@keyframes zoom{
+  from{transform:scale(1)}
+  to{transform:scale(1.04)}
+}
+
+/* Diya */
+.diya{
+  font-size:65px;
+  margin:10px;
+  animation:diya 1s infinite alternate;
+}
+
+@keyframes diya{
+  from{
+    transform:scale(1);
+    filter:brightness(1);
+  }
+  to{
+    transform:scale(1.15);
+    filter:brightness(1.7);
+  }
+}
+
+/* Buttons */
+.controls{
+  margin:20px 0;
+}
+
+button{
+  border:none;
+  margin:7px;
+  padding:14px 24px;
+  border-radius:30px;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  color:#5b1600;
+  background:linear-gradient(45deg,#ffd54f,#ff9800);
+  box-shadow:0 5px 15px rgba(0,0,0,.4);
+  transition:.3s;
+}
+
+button:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 8px 20px rgba(255,193,7,.5);
+}
+
+/* Aarti */
+.aarti{
+  display:none;
+  margin-top:25px;
+  padding:30px 25px;
+  border:2px solid #ffd54f;
+  border-radius:25px;
+  background:rgba(60,0,0,.82);
+  box-shadow:0 0 30px rgba(255,193,7,.35);
+  line-height:2;
+  font-size:20px;
+}
+
+.aarti.show{
+  display:block;
+  animation:appear .8s ease;
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.aarti h2{
+  color:#ffd54f;
+  margin-bottom:20px;
+  text-shadow:0 0 10px #ff9800;
+}
+
+.aarti p{
+  margin:22px 0;
+}
+
+.jai{
+  margin:30px 0;
+  font-size:30px;
+  font-weight:bold;
+  color:#ffd54f;
+  animation:glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 5px #ff9800}
+  to{text-shadow:0 0 25px #fff176}
+}
+
+footer{
+  padding:25px;
+  margin-top:30px;
+  background:rgba(0,0,0,.4);
+  color:#ffd54f;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+  header h1{
+    font-size:30px;
+  }
+
+  header p{
+    font-size:16px;
+  }
+
+  .mata{
+    width:220px;
+    height:220px;
+  }
+
+  .aarti{
+    padding:20px 15px;
+    font-size:17px;
+  }
+
+  .jai{
+    font-size:23px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- फूल -->
+<div class="flower" style="left:5%;animation-duration:8s;">🌸</div>
+<div class="flower" style="left:20%;animation-duration:11s;">🌺</div>
+<div class="flower" style="left:40%;animation-duration:9s;">🌼</div>
+<div class="flower" style="left:60%;animation-duration:12s;">🌸</div>
+<div class="flower" style="left:80%;animation-duration:10s;">🌺</div>
+<div class="flower" style="left:95%;animation-duration:7s;">🌼</div>
+
+<header>
+  <h1>🌺 जय माता दी 🌺</h1>
+  <p>🪔 श्री दुर्गा माता की पावन आरती 🪔</p>
+</header>
+
+<div class="container">
+
+  <!-- अपनी Durga photo यहाँ लगा सकते हैं -->
+  <img
+    class="mata"
+    src="https://i.pinimg.com/236x/1d/cc/48/1dcc48bfc89132f249044f59af58cf67.jpg"
+    alt="माँ दुर्गा">
+
+  <div class="diya">🪔</div>
+
+  <div class="controls">
+    <button onclick="startAarti()">🔔 आरती शुरू करें</button>
+    <button onclick="stopAarti()">⏹️ रोकें</button>
+    <button onclick="showAarti()">📖 आरती पढ़ें</button>
+    <button onclick="bell()">🔔 घंटी</button>
+  </div>
+
+  <div id="aarti" class="aarti">
+
+    <h2>🌺 ॐ जय अम्बे गौरी 🌺</h2>
+
+    <p>
+      ॐ जय अम्बे गौरी, मैया जय श्यामा गौरी।<br>
+      तुमको निशदिन ध्यावत, हरि ब्रह्मा शिवरी॥
+    </p>
+
+    <p>
+      मांग सिंदूर विराजत, टीको मृगमद को।<br>
+      उज्ज्वल से दोउ नैना, चंद्रवदन नीको॥
+    </p>
+
+    <p>
+      कनक समान कलेवर, रक्ताम्बर राजै।<br>
+      रक्तपुष्प गल माला, कंठन पर साजै॥
+    </p>
+
+    <p>
+      केहरि वाहन राजत, खड्ग कृपाण धारी।<br>
+      सुर-नर-मुनिजन सेवत, तिनके दुखहारी॥
+    </p>
+
+    <p>
+      शुम्भ निशुम्भ बिदारे, महिषासुर घाती।<br>
+      धूम्र विलोचन नैना, निशदिन मदमाती॥
+    </p>
+
+    <p>
+      चण्ड-मुण्ड संहारे, शोणित बीज हरे।<br>
+      मधु-कैटभ दोउ मारे, सुर भयहीन करे॥
+    </p>
+
+    <p>
+      तुम ही जग की माता, तुम ही हो भरता।<br>
+      भक्तन की दुख हरता, सुख संपत्ति करता॥
+    </p>
+
+    <p>
+      भुजा चार अति शोभित, वर मुद्रा धारी।<br>
+      मनवांछित फल पावत, सेवत नर-नारी॥
+    </p>
+
+    <p>
+      कंचन थाल विराजत, अगर कपूर बाती।<br>
+      श्री मालकेतु में राजत, कोटि रतन ज्योती॥
+    </p>
+
+    <p>
+      श्री अम्बेजी की आरती, जो कोई नर गावै।<br>
+      कहत शिवानंद स्वामी, सुख-संपत्ति पावै॥
+    </p>
+
+    <h2>🙏 जय माता दी 🙏</h2>
+
+  </div>
+
+  <div class="jai">
+    🌺 माँ दुर्गा सबकी मनोकामना पूर्ण करें 🌺
+  </div>
+
+</div>
+
+<footer>
+  🪔 ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे 🪔
+  <br><br>
+  🌺 जय माता दी 🌺
+</footer>
+
+<script>
+
+/* आरती दिखाना */
+function showAarti(){
+  document.getElementById("aarti").classList.add("show");
+}
+
+/* आरती शुरू */
+function startAarti(){
+
+  showAarti();
+
+  if("speechSynthesis" in window){
+
+    let text=document.getElementById("aarti").innerText;
+
+    let speech=new SpeechSynthesisUtterance(text);
+
+    speech.lang="hi-IN";
+    speech.rate=.72;
+    speech.pitch=1;
+
+    speechSynthesis.cancel();
+    speechSynthesis.speak(speech);
+  }
+}
+
+/* आरती रोकना */
+function stopAarti(){
+
+  if("speechSynthesis" in window){
+    speechSynthesis.cancel();
+  }
+}
+
+/* घंटी की Web Audio आवाज */
+function bell(){
+
+  const AudioContext =
+    window.AudioContext || window.webkitAudioContext;
+
+  const audio=new AudioContext();
+
+  const oscillator=audio.createOscillator();
+  const gain=audio.createGain();
+
+  oscillator.type="sine";
+  oscillator.frequency.setValueAtTime(
+    700,
+    audio.currentTime
+  );
+
+  oscillator.frequency.exponentialRampToValueAtTime(
+    250,
+    audio.currentTime+2
+  );
+
+  gain.gain.setValueAtTime(.5,audio.currentTime);
+
+  gain.gain.exponentialRampToValueAtTime(
+    .001,
+    audio.currentTime+2
+  );
+
+  oscillator.connect(gain);
+  gain.connect(audio.destination);
+
+  oscillator.start();
+  oscillator.stop(audio.currentTime+2);
+}
+
+</script>
+
+</body>
+</html>
